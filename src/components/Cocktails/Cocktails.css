@@ -1,0 +1,39 @@
+.all-cocktails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+}
+
+.all-cocktails .category-name {
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #818181;
+    border-bottom: 1px solid #D0D0D0;
+    padding: 0 0 10px 0;
+    margin: 0 0 30px 0;
+}
+
+.all-cocktails .cocktails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.cocktails .cocktail {
+    width: 18%;
+    margin: 0 0 20px 0;
+}
+
+.cocktails .cocktail img {
+    width: 100%;
+}
+
+.cocktails .cocktail .name {
+    font-size: 18px;
+    color: #000000;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
