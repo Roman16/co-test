@@ -9,12 +9,10 @@ class Filters extends Component {
     };
 
 
-    handleChangeCheckbox = (value, index) => {
-        let filtersList = this.state.filters;
-        filtersList[index].value = value;
-
+    handleChangeCheckbox = (value, name) => {
+        console.log(name);
         this.setState({
-            filters: filtersList
+            filters: this.state.filters.map(item => item.name === name ? {...item, value: value} : item)
         })
     };
 
@@ -44,7 +42,8 @@ class Filters extends Component {
                         <input
                             type="checkbox"
                             checked={item.value}
-                            onChange={(e) => this.handleChangeCheckbox(e.target.checked, index)}
+                            value={item.name}
+                            onChange={(e) => this.handleChangeCheckbox(e.target.checked, e.target.value)}
                         />
 
                         {item.name}
